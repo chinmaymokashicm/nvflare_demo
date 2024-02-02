@@ -75,8 +75,8 @@ def file_checks(vars: dict) -> None:
     nvfl_folderpath: str = vars["nvfl_folderpath"]
     wait_for_files([networkfile, udffile, requirementsfile])
     test_nn_functionality(networkfile)
-    shutil.copy2(networkfile, nvfl_folderpath)
-    shutil.copy2(udffile, nvfl_folderpath)
+    shutil.copy2(networkfile, os.path.join(nvfl_folderpath, "app", "custom"))
+    shutil.copy2(udffile, os.path.join(nvfl_folderpath, "app", "custom"))
     
 def migrate_dataset(vars: dict, one2one_mapping: bool = True) -> None:
     folderpath_root_source: str = typer.prompt("Enter folder path of the dataset")
