@@ -1,0 +1,3 @@
+networkfile: "network.py"
+udffile: "udf.py"
+nvfl_folderpath: "nvfl/jobs/nvfl"
