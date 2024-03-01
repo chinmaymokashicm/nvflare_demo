@@ -1,3 +1,7 @@
 venv/
 __pycache__/
 data/
+nvfl/jobs/nvfl/app/custom/network.py
+nvfl/jobs/nvfl/app/custom/udf.py
+workspace/
+network*.py

@@ -10,8 +10,9 @@
             "executor": {
                 "path": "trainer.Trainer",
                 "args": {
-                    "data_loader_funcname": null,
-                    "label_loader_funcname": null
+                    "data_loader_funcname": "load_nifti",
+                    "label_loader_funcname": "load_nifti",
+                    "transform_funcname": "transpose"
                 }
             }
         },
@@ -22,8 +23,9 @@
             "executor": {
                 "path": "validator.Validator",
                 "args": {
-                    "data_loader_funcname": null,
-                    "label_loader_funcname": null
+                    "data_loader_funcname": "load_nifti",
+                    "label_loader_funcname": "load_nifti",
+                    "transform_funcname": "transpose"
                 }
             }
         }
