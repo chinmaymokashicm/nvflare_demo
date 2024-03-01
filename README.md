@@ -5,15 +5,20 @@ A command-line interface that guides you through choosing your own PyTorch netwo
 - network.py file in the root folder, that describes the PyTorch network named "Network"
 - udf.py file in the root folder, that would contain your custom UDFs for functions such as data loading, transformation, etc.
 - Updated vars.yaml file that contains some of the configuration for your NVFlare application
-- Updated project.yml file that contains config for provisioning resources for a production-level application
+- Updated project.yml file that contains config for provisioning resources for a production-level application. If it is not present run the command `nvflare provision` on the root folder, after installing dependencies.
 
 
 ## Running the command-line-interface
 - Preferably in a python virtual environment, install dependencies-
-`
+`   
 pip install -r requirements.txt
 `
 - Run the CLI-
 `
 python cli.py
 `
+- Run the command-
+`
+nvflare provision -w workspace
+`
+This will create the workspace folder for resource provisioning. It will use the project.yml file.
